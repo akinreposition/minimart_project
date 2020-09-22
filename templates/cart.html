@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Chart</title>
+</head>
+<body>
+    {% block content %}
+    <h2>Welcome.</h2>
+    <p>We process all goods published here</p>
+    <p>{{ number }} </p>
+    <div>
+        {% for items in cart_names %}
+        {% if items == 000 %}
+    <li>{{ forloop.counter }} - {{ items | add:234  }}</li>
+        {% elif items == "cart3" %}
+        <li>This is third cart.</li>
+        {% else %}
+       <li>{{ forloop.counter}} - {{ items }}</li>
+        {% endif %}
+    {% endfor %}
+    </div>
+    {% endblock content %}
+
+</body>
+</html>

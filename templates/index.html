@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    {% block content %}
+    <h2>Welcome to Nimiss Shopping mart</h2>
+    <p>Here at Nimiss we provide all Home essentials.
+    Thank you please look around for what interest you
+    </p>
+    {{request.user.is_authenticated}}
+    {% endblock content %}
+</body>
+</html>
